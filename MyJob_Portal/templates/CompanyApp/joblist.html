@@ -1,0 +1,26 @@
+ {% extends 'base.html' %}
+
+{% block title %}
+    <title>Job_List</title>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-striped" style="width:700px">
+        <tr>
+            <th>ID</th>
+            <th>Designation</th>
+        </tr>
+        {% for j in job %}
+        <tr>
+            <td>{{j.id}}</td>
+            <td><a href="/ca/jobdetail/{{j.id}}">{{j.desg}}</a></td>
+            <td>
+                <a href="/ca/jobupdate/{{j.id}}" class="btn btn-primary">Update</a>
+            </td>
+            <td>
+                <a href="/ca/jobdelete/{{j.id}}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

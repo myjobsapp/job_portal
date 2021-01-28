@@ -1,0 +1,32 @@
+header h1{
+    color: red;
+    text-align: center;
+    background-color: springgreen;
+    }
+    .my_navbar{
+    background-color:gray;
+    list-style-type: none;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    text-transform:uppercase;
+    }
+    li{
+    float: left;
+    padding: 10px;
+    margin: 0px;
+    }
+    li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px 15px 15px 15px;
+    }
+    li a{
+    background-color: black;
+    }
+footer h2{
+background-color: gray;
+text-align: center;
+}

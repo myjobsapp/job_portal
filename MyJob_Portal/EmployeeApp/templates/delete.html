@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>delete</title>
+{% endblock %}
+
+{% block content %}
+    <h5>Do you really want to delete this order of "{{empd.ename}}" ?</h5><br>
+    <a href="{% url 'all_emp' %}">
+        <button class="btn btn-success">Cancel</button>
+    </a><br><br>
+<form method="post">
+    {% csrf_token %}
+        <a href="{% url 'delete' empd.id %}">
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </a>
+
+</form>
+{% endblock %}

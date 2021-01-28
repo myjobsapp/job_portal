@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Add_Company</title>
+{% endblock %}
+
+{% block content %}
+    <form method="post" class="jumbotron" style="width:500px">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Add Company" class="btn btn-success">
+
+    </form>
+{% endblock %}
+
+

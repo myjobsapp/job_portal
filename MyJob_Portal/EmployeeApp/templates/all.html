@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>All_Emp</title>
+{% endblock %}
+
+{% block content %}
+    <table class="table table-striped" style=" text-align: center; width: 900px">
+        <tr>
+            <th>Emp-Id</th>
+            <th>Emp-Name</th>
+            <th>Emp-Addr</th>
+            <th>Emp-Salary</th>
+        </tr>
+        {% for e in emp %}
+        <tr>
+            <td>{{e.eid}}</td>
+            <td>{{e.ename}}</td>
+            <td>{{e.eaddr}}</td>
+            <td>{{e.esalary}}</td>
+            <td>
+                <a href="/emp/update/{{e.id}}">
+                    <button class="btn btn-primary">Update</button>
+                </a>
+            </td>
+            <td>
+                <a href="/emp/delete/{{e.id}}">
+                    <button class="btn btn-danger">Delete</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
